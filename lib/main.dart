@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_instagram_clone/screen/login_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:instagram_clone_1/screen/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        home: ScreenUtilInit(designSize: Size(375, 812), child: LoginScreen()));
   }
 }
