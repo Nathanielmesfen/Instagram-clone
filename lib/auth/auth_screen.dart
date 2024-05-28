@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone_1/screen/login_screen.dart';
-import 'package:instagram_clone_1/screen/signup_screen.dart';
+import 'package:instagram_clone_1/screen/signup.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
