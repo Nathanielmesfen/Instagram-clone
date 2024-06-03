@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:instagram_clone_1/widgets/post_widget.dart';
 
@@ -29,7 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
               Icons.favorite_border_outlined,
               color: Colors.black,
             ),
-            Image.asset('images/send.jpg'),
+            Container(
+              child: Image.asset('images/messenger.png'),
+              width: 38.w,
+              height: 18.h,
+            ),
           ],
           backgroundColor: Color(0xffFAFAFA),
         ),
@@ -40,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 (context, index) {
                   return PostWidget();
                 },
-                childCount: 5,
+                childCount: 8,
               ),
             ),
           ],

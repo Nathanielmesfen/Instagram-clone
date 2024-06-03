@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:instagram_clone_1/screen/add_post.screen.dart';
+import 'package:instagram_clone_1/screen/add_reels_screen.dart';
+import 'package:instagram_clone_1/screen/add_screen.dart';
 import 'package:instagram_clone_1/screen/explor_screen.dart';
 import 'package:instagram_clone_1/screen/home.dart';
 import 'package:instagram_clone_1/screen/profile_screen.dart';
@@ -49,20 +52,28 @@ class _Navigation_ScreenState extends State<Navigation_Screen> {
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.grey,
           currentIndex: _currentIndex,
+          onTap: navigationTapped,
           items: [
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.search),
               label: '',
             ),
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
               icon: Icon(Icons.camera),
               label: '',
             ),
             BottomNavigationBarItem(
+              icon: Image.asset(
+                'images/instagram-reels-icon.png',
+                height: 20,
+              ),
+              label: '',
+            ),
+            const BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: '',
             ),
@@ -74,7 +85,10 @@ class _Navigation_ScreenState extends State<Navigation_Screen> {
           children: const [
             HomeScreen(),
             ExplorScreen(),
+            AddScreen(),
             ReelScreen(),
+            AddReelsScreen(),
+            AddPostScreen(),
             ProfileScreen(),
           ],
         ));
