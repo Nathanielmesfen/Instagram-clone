@@ -69,7 +69,7 @@ class _AddScreenState extends State<AddScreen> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      navigationTapped(0);
+                      navigationTapped(1);
                     },
                     child: Text(
                       'Post',
